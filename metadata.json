@@ -1,0 +1,7 @@
+{
+  "name": "Career Catalyst: Your Lifelong Learning Coach",
+  "description": "Career Catalyst is a personal AI guide that helps Indian professionals continuously learn new skills. It creates custom learning plans to close skill gaps and achieve their career goals.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

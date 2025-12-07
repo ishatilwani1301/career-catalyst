@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath d='M4 19.5L10 13.5L13 16.5L20 9.5' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3cpath d='M15 9.5H20V14.5' stroke='%232563EB' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3e%3c/svg%3e" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Catalyst: Your Lifelong Learning Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary': '#2563EB',      // Vibrant Blue for trust and technology
+              'secondary': '#0EA5E9',    // Vibrant Sky Blue (like Twitter) for actions
+              'accent': '#0EA5E9',       // Using secondary as the main accent
+              'light': '#F0F4F8',      // Soft, airy blue-gray background
+              'dark': '#0F172A',       // Deep navy blue background
+              'text-light-mode': '#1E293B', // Muted black for readability
+              'text-dark-mode': '#E2E8F0',  // Soft off-white
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+      // On page load, apply the theme from localStorage or system preference to avoid FOUC
+      if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.23.0",
+    "marked": "https://aistudiocdn.com/marked@^16.4.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-light dark:bg-dark text-text-light-mode dark:text-text-dark-mode">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
